@@ -1,5 +1,4 @@
 import { Link, useLocation } from "react-router-dom"
-import logo from "../assets/logo-white.png"
 import { LuLayoutDashboard, LuFolders } from "react-icons/lu"
 import { AiOutlineFile } from "react-icons/ai"
 import { LiaListSolid } from "react-icons/lia"
@@ -30,7 +29,7 @@ const Sidebar = () => {
           onClick={onModalClose}
         >
           <img
-            src={logo}
+            src="https://res.cloudinary.com/dxvrhfhtl/image/upload/v1698599610/ihl7wvctz1zhwrxehe1c.png"
             alt="logo"
             className="w-full h-full"
           />

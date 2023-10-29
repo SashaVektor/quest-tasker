@@ -1,5 +1,4 @@
 import { Link, useLocation, useNavigate } from "react-router-dom"
-import logo from "../assets/logo-black.png"
 import Button from "./ui/Button"
 
 
@@ -19,7 +18,7 @@ const AuthHeader = () => {
         <header className="flex max-w-7xl mx-auto justify-between items-center px-4 py-5 mb-2 lg:mb-10">
             <Link to="/" className="w-[150px] h-[30px]">
                 <img
-                    src={logo}
+                    src="https://res.cloudinary.com/dxvrhfhtl/image/upload/v1698599582/vi3aswhz57s7u0ny0pee.png"
                     alt="logo"
                     className="h-full w-full object-contain"
                 />

@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom"
 import AuthHeader from "../components/AuthHeader"
-import loginImg from "../assets/auth-img.png"
 import LoginForm from "../components/forms/LoginForm"
 
 const LoginPage = () => {
@@ -20,7 +19,7 @@ const LoginPage = () => {
           </p>
           <div className="max-w-full h-[360px] mt-10 hidden lg:block">
             <img
-              src={loginImg}
+              src="https://res.cloudinary.com/dxvrhfhtl/image/upload/v1698599491/vwjh8cy89dterzfluvyw.png"
               alt="login img"
               className="h-full w-full object-contain"
             />

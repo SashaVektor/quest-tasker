@@ -1,5 +1,4 @@
 import { FC } from 'react'
-import emptyImg from "../assets/empty-state.png"
 import Button from './ui/Button'
 import { AiFillPlusCircle } from 'react-icons/ai'
 
@@ -15,7 +14,7 @@ const EmptyState: FC<EmptyStateProps> = ({ buttonText, onClick, title }) => {
             <div className='flex flex-col items-center'>
                 <div className='w-[260px] h-[200px] md:w-[320px] md:h-[260px] mb-14'>
                     <img
-                        src={emptyImg}
+                        src="https://res.cloudinary.com/dxvrhfhtl/image/upload/v1698599540/d0jlzcrqv7t66bavordb.png"
                         alt="empty img"
                         className='h-full w-full object-contain'
                     />

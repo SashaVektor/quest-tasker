@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom"
 import AuthHeader from "../components/AuthHeader"
-import loginImg from "../assets/auth-img.png"
 import RegisterForm from "../components/forms/RegisterForm"
 
 
@@ -21,7 +20,7 @@ const RegisterPage = () => {
                         </p>
                         <div className="max-w-full h-[360px] mt-10 hidden lg:block">
                             <img
-                                src={loginImg}
+                                src="https://res.cloudinary.com/dxvrhfhtl/image/upload/v1698599491/vwjh8cy89dterzfluvyw.png"
                                 alt="login img"
                                 className="h-full w-full object-contain"
                             />
