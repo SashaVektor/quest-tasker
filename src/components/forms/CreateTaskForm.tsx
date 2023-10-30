@@ -122,11 +122,13 @@ const CreateTaskForm = () => {
                 setSubtasks([])
                 setImages([])
                 reset();
-                refetch();
                 refetchUserTasks();
                 refetchUserFolders()
+                if (folderId) {
+                    refetch()
+                }
                 dispatch(onClose())
-                dispatch(setIsCreateTaksModalOpen({ isOpen: false, folderId }))
+                dispatch(setIsCreateTaksModalOpen({ isOpen: false, folderId: null }))
             } else {
                 toast.error("Something went wrong! Try again.")
             }

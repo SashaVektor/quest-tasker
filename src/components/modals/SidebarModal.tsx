@@ -12,7 +12,7 @@ const SidebarModal = () => {
     return (
         <div
             onClick={handleModalClick}
-            className={`${isOpen ? "translate-x-0" : "translate-x-[-150%]"} h-[100dvh] duration-500 absolute top-0 w-[100dvw] flex justify-start bg-black/50 z-[45]`}
+            className={`${isOpen ? "translate-x-0" : "translate-x-[-150%]"} h-[100dvh] duration-500 absolute top-0 w-[100dvw] hidden sm:flex lg:hidden justify-start bg-black/50 z-[45]`}
         >
             <Sidebar />
         </div>

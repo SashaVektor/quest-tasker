@@ -126,6 +126,9 @@ const EditTaskForm: FC<EditTaskFormProps> = ({ status, task, user, setEditMode }
                 setEditMode(false)
                 dispatch(onClose())
                 dispatch(setTask(null))
+                if(task.folderId !== "Dashboard") {
+                    refetch();
+                }
             } else {
                 toast.error("Something went wrong! Try again.")
             }

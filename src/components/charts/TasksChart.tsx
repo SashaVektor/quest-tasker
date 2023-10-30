@@ -48,7 +48,7 @@ const TasksChart: FC<TasksChartProps> = ({ tasks }) => {
                 <div className='sm:h-[260px] flex items-center justify-center w-full'>
                     <EmptyDashboardState
                     title="You don't have tasks yet!"
-                    onClick={() => dispatch(setIsCreateTaksModalOpen({isOpen: true}))}
+                    onClick={() => dispatch(setIsCreateTaksModalOpen({isOpen: true, folderId: null}))}
                     linkTitle='Create first task'
                     descr="Create a task so you don't forget to do it."
                 />

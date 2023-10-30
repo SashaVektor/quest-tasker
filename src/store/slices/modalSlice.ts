@@ -13,7 +13,8 @@ const initialState = {
     isDeleteFileModalOpen: false,
     isSidebarModalOpen: false,
     fileId: "",
-    folderId: ""
+    folderId: "",
+    deleteFolderId: ""
 }
 
 const modalSlice = createSlice({
@@ -43,7 +44,8 @@ const modalSlice = createSlice({
             state.isTaskModalOpen = action.payload
         },
         setIsDeleteFolderModalOpen: (state, action) => {
-            state.isDeleteFolderModalOpen = action.payload
+            state.isDeleteFolderModalOpen = action.payload.isOpen
+            state.deleteFolderId = action.payload.folderId
         },
         setIsCreateFileModalOpen: (state, action) => {
             state.isCreateFileModalOpen = action.payload

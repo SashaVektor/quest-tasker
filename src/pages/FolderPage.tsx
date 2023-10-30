@@ -133,7 +133,7 @@ const FolderPage = () => {
                     bgColor='bg-transparent'
                     color='text-primary'
                     className='flex items-center gap-2 hover:bg-content/10 border-none py-1 px-2 rounded-lg'
-                    onClick={() => dispatch(setIsDeleteFolderModalOpen(true))}
+                    onClick={() => dispatch(setIsDeleteFolderModalOpen({isOpen: true, folderId}))}
                 >
                     <AiOutlineDelete size={24} className="text-primary" />
                     <p className="hidden sm:block">Delete Folder</p>

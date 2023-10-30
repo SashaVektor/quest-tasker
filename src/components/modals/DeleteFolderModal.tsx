@@ -4,7 +4,7 @@ import Button from "../ui/Button"
 import { useAppDispatch, useAppSelector } from "../../store/hooks"
 import { RootState } from "../../store/store"
 import { onClose } from "../../store/slices/modalSlice"
-import { useLocation, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import { useGetUserFoldersQuery } from "../../store/services/getItems"
 import toast from "react-hot-toast"
 import { deleteFolder } from "../../helpers/func/deleteItems/deleteFolder"
@@ -15,9 +15,8 @@ import { CgSpinner } from 'react-icons/cg'
 const DeleteFolderModal = () => {
     const isOpen = useAppSelector((state: RootState) => state.modal.isDeleteFolderModalOpen)
     const user = useAppSelector((state: RootState) => state.auth.user)
+    const id = useAppSelector((state: RootState) => state.modal.deleteFolderId)
     const dispatch = useAppDispatch();
-    const { pathname } = useLocation();
-    const id = pathname.replace("/task-manager/", "")
     const userId = user?._id ? user._id : ""
     const { refetch } = useGetUserFoldersQuery(userId)
     const navigate = useNavigate();

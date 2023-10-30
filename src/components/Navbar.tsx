@@ -7,6 +7,7 @@ import UserPopup from './UserPopup'
 import Stopwatch from './Stopwatch'
 import { AiOutlineMenu } from 'react-icons/ai'
 import { onClose, setIsSidebarModalOpen } from '../store/slices/modalSlice'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   const user = useAppSelector((state: RootState) => state.auth.user)
@@ -15,10 +16,10 @@ const Navbar = () => {
 
 
   return (
-    <div className='py-2 md:py-5 px-3 md:px-8 bg-white border-b border-content/70 flex items-center h-16 fixed top-0 w-[100dvw] lg:w-[calc(100dvw-280px)] justify-between z-30'>
+    <div className='py-2 md:py-5 px-3 md:px-8 bg-white border-b border-content/70 flex items-center h-16 fixed top-0 gap-3 w-[100dvw] lg:w-[calc(100dvw-280px)] justify-between z-30'>
       <div>
         <button
-          className='block lg:hidden'
+          className='hidden sm:block lg:hidden'
           onClick={() => {
             dispatch(onClose());
             dispatch(setIsSidebarModalOpen(true))
@@ -26,6 +27,13 @@ const Navbar = () => {
         >
           <AiOutlineMenu size={24} className="text-primary" />
         </button>
+        <Link className='w-10 h-10 block sm:hidden' to="/dashboard">
+          <img
+            src="https://res.cloudinary.com/dxvrhfhtl/image/upload/v1698676865/dborxhy4vsutc1hg9qne.png"
+            alt="logo"
+            className='w-full h-full object-contain'
+          />
+        </Link>
       </div>
       <div className='ml-0 md:ml-3 xl:ml-[15%]'>
         <SearchInput />

@@ -24,7 +24,7 @@ const SearchInput = () => {
     const { data, isLoading } = useGetSearchedItemsQuery({ userId, searchTerm })
 
     return (
-        <div className="flex items-center relative w-[250px] sm:w-[400px] xl:w-[500px]">
+        <div className="flex items-center relative w-full sm:w-[400px] xl:w-[500px]">
             <BsSearch className="text-primary absolute left-3 top-[14px] text-lg" />
             <input
                 type='text'
@@ -40,12 +40,12 @@ const SearchInput = () => {
             >
                 Clear
             </button>
-            {(isLoading && searchTerm.length > 0 && !data)? (<div className='w-[250px] sm:w-[400px] px-3 xl:w-[500px] max-h-[50dvh] overflow-y-auto scrollbar-w-2 scrollbar-track-yellow-lighter scrollbar-thumb-yellow scrollbar-thumb-rounded absolute top-12 left-0 bg-white rounded-b-md border-t border-content/20 pt-4 pb-1 drop-shadow-sm flex flex-col gap-2'>
+            {(isLoading && searchTerm.length > 0 && !data)? (<div className='w-full sm:w-[400px] px-3 xl:w-[500px] max-h-[50dvh] overflow-y-auto scrollbar-w-2 scrollbar-track-yellow-lighter scrollbar-thumb-yellow scrollbar-thumb-rounded absolute top-12 left-0 bg-white rounded-b-md border-t border-content/20 pt-4 pb-1 drop-shadow-sm flex flex-col gap-2'>
                 {[...new Array(5)].map((_, i) => (
                     <TitleLoader key={i}/>
                 ))}
             </div>) 
-            : (searchTerm.length > 0 && data) ? <div className='w-[250px] sm:w-[400px] xl:w-[500px] max-h-[50dvh] overflow-y-auto scrollbar-w-2 scrollbar-track-yellow-lighter scrollbar-thumb-yellow scrollbar-thumb-rounded absolute top-12 left-0 bg-white rounded-b-md border-t border-content/20 pt-4 pb-1 drop-shadow-sm'>
+            : (searchTerm.length > 0 && data) ? <div className='w-full sm:w-[400px] xl:w-[500px] max-h-[50dvh] overflow-y-auto scrollbar-w-2 scrollbar-track-yellow-lighter scrollbar-thumb-yellow scrollbar-thumb-rounded absolute top-12 left-0 bg-white rounded-b-md border-t border-content/20 pt-4 pb-1 drop-shadow-sm'>
                 <h2 className='text-content/70 mb-2 px-3'>
                     Tasks ({data.tasks.length})
                 </h2>

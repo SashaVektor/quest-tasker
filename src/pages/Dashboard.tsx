@@ -150,7 +150,7 @@ const Dashboard = () => {
                         {(isLoading || !userTasks) ? (<TitleLoader />) : <h4 className="text-base sm:text-lg font-semibold text-primary">
                             My Tasks
                         </h4>}
-                        <button onClick={() => dispatch(setIsCreateTaksModalOpen({ isOpen: true }))}
+                        <button onClick={() => dispatch(setIsCreateTaksModalOpen({ isOpen: true, folderId: null }))}
                             className='flex items-center gap-2 hover:bg-content/10 border-none py-1 px-2 rounded-lg text-sm transition'
                         >
                             <AiFillPlusCircle size={20} className="text-primary" />
@@ -173,7 +173,7 @@ const Dashboard = () => {
                             ? <div className="flex h-[160px] mt-10 sm:mt-16">
                                 <EmptyDashboardState
                                     title="You don't have tasks yet!"
-                                    onClick={() => dispatch(setIsCreateTaksModalOpen({ isOpen: true }))}
+                                    onClick={() => dispatch(setIsCreateTaksModalOpen({ isOpen: true, folderId: null }))}
                                     linkTitle='Create first task'
                                     descr="Create a task so you don't forget to do it."
                                 />
