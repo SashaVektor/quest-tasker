@@ -218,7 +218,7 @@ const TaskModal = () => {
                                                 </p>
                                                 <div className="flex items-center gap-2">
                                                     <div className={`w-3 h-3 rounded-full ${getStatusColor(subtaks.status)}`} />
-                                                    <p className="text-primary text-sm font-bold">
+                                                    <p className="text-primary text-sm font-bold hidden sm:block">
                                                         {subtaks.status}
                                                     </p>
                                                 </div>
